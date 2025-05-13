@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Games Zone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Press Start 2P', cursive; /* Added a fun, retro font */
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light grey background */
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 20px;
+            font-size: 1.5rem; /* Responsive heading size */
+            color: #2c3e50; /* Dark blue-gray */
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 0.8rem;
+        }
+        /* Menu styles */
+        .menu {
+            background-color: #3498db; /* Blue menu bar */
+            overflow: hidden;
+            border-bottom: 4px solid #2980b9; /* Darker blue border */
+        }
+        .menu ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center; /* Center the menu items */
+        }
+        .menu ul li {
+            margin: 10px 20px; /* Increased horizontal margin */
+        }
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem; /* Increased font size */
+            padding: 8px 16px; /* Added padding to the links */
+            border-radius: 8px; /* Rounded corners for the links */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+        .menu ul li a:hover,
+        .menu ul li a.active {
+            background-color: #217dbb; /* Darker blue on hover/active */
+        }
+        .menu ul li a.home {
+            font-size: 1.2rem; /* Increased font size for home */
+            font-weight: bold;
+        }
+
+        /* Game container styles */
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the iframes */
+            margin-top: 20px;
+            width: 95%; /* Take up most of the viewport */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .game-iframe-container {
+            position: relative;
+            padding-bottom: 56.25%;  /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            width: 100%; /* Make the iframe container fill its parent */
+            max-width: 800px; /* Limit the maximum width of the game iframe */
+            margin-bottom: 20px;
+            border: 4px solid #3498db; /* Blue border */
+            border-radius: 12px; /* Rounded corners for the game iframe */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .game-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+       .game-link {
+            color: #3498db; /* Blue link color */
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            display: block; /* Make the link a block element */
+        }
+
+        .game-link:hover {
+            color: #217dbb; /* Darker blue on hover */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .menu ul li {
+                margin: 10px 10px; /* Adjust menu spacing on smaller screens */
+            }
+            .menu ul li a {
+                font-size: 0.9rem; /* Smaller font on smaller screens */
+                padding: 6px 12px;
+            }
+            h1 {
+                font-size: 1.2rem; /* Smaller heading on mobile */
+            }
+            p{
+                font-size: 0.7rem;
+            }
+            .game-iframe-container{
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="#" class="home active">Home</a></li>
+            <li><a href="#drift-king">Drift King</a></li>
+            <li><a href="#basketball-king">Basketball King</a></li>
+            <li><a href="#block-blast">Block Blast</a></li>
+        </ul>
+    </div>
+
+    <h1>Fun Games Zone</h1>
+    <p>Enjoy a selection of fun and engaging games!</p>
+
+    <div class="game-container" id="drift-king">
+        <h2>Drift King</h2>
+        <div class="game-iframe-container">
+            <iframe src="https://www.onlinegames.io/games/2024/unity/drift-king/index.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a href="https://www.onlinegames.io/games/2024/unity/drift-king/index.html" target="_blank" class="game-link">Play Drift King on OnlineGames.io</a>
+    </div>
+
+    <div class="game-container" id="basketball-king">
+        <h2>Basketball King</h2>
+        <div class="game-iframe-container">
+            <iframe src="https://cloud.onlinegames.io/games/2024/construct/316/basketball-king/index-og.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a href="https://cloud.onlinegames.io/games/2024/construct/316/basketball-king/index-og.html" target="_blank" class="game-link">Play Basketball King</a>
+    </div>
+
+    <div class="game-container" id="block-blast">
+        <h2>Block Blast</h2>
+        <div class="game-iframe-container">
+            <iframe src="https://cloud.onlinegames.io/games/2024/unity3/block-blast/index-og.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a href="https://cloud.onlinegames.io/games/2024/unity3/block-blast/index-og.html" target="_blank" class="game-link">Play Block Blast</a>
+    </div>
+</body>
+</html>
